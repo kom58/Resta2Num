@@ -1,19 +1,10 @@
 package ejerderesta;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Aplicacion {
     private JPanel panBase;
-    private JPanel panSuperior;
-    private JPanel panMedio;
-    private JPanel panInferior;
-    private JPanel panSeparador;
     private JButton btnRestar;
-    private JLabel txtTitulo;
-    private JLabel titNum1;
-    private JLabel titNum2;
     private JTextField datNum1;
     private JTextField datNum2;
     private JLabel txtResultado;
@@ -21,27 +12,9 @@ public class Aplicacion {
 
     public Aplicacion() {
         
-        btnRestar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-               haceerResta();
-            }
-        });
-        datNum1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                haceerResta();
-            }
-        });
-        datNum2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                haceerResta();
-            }
-        });
+        btnRestar.addActionListener(e -> haceerResta());
+        datNum1.addActionListener(e -> haceerResta());
+        datNum2.addActionListener(e -> haceerResta());
     }
 
     public void haceerResta(){
